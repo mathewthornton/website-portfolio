@@ -1,0 +1,327 @@
+:root {
+    --primary-color: #5e523d; /* logo color, links, and text */
+    --secondary-color: #bbbaaf; /* link hover, button hover, grid hover */
+    --tertiary-color: #a1a499; /* button color, table color */
+    --light-gray: #e1e0e1; /* grid color, contact box background */
+    --lighter-gray: #efedee; /* body background */
+    --secondary-button-color: #838a6f;
+    --button-hover-font-color: #2b2b2b;
+    --active-color: #2c3322;
+  }
+
+body {
+    background-color: var(--lighter-gray);
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height:1.2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--primary-color);
+    font-size:18px;
+    transition: .3s;
+}
+
+a:hover, a:focus {
+    color: var(--secondary-color);
+}
+
+a:active {
+    color: var(--active-color);
+}
+
+.button, input[type="submit"] {
+    border: none;
+    font-family: inherit;
+    background-color: var(--tertiary-color);
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    display:inline-block;
+    transition: .3s;
+}
+
+.standard-label {
+    align-items:center;
+}
+
+span {
+    background-color: var(--primary-color);
+    color: var(--light-gray);
+    padding:6px;
+    font-family: monospace;
+    font-size:12px;
+    letter-spacing:-1px;
+}
+
+input, textarea {
+    display:flex;
+    width: 250px;
+    resize:none;
+    justify-content: center;
+}
+
+#contact-message {
+    height:100px;
+}
+
+.button__secondary {
+    background-color: var(--secondary-button-color);
+    color: var(--button-hover-font-color);
+  }
+
+.button:hover, .button:focus, input:hover {
+    cursor: pointer;
+    color: var(--button-hover-font-color);
+    background-color: var(--secondary-color);
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.profile__portrait {
+    border-radius: 100%;
+    float: left;
+    margin: 0 40px 0 0;
+    width: 250px;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display:inline-block;
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+.navigation-list__item--active {
+    text-decoration: none;
+  }
+  
+.page-header {
+    display: flex;
+    width:100%;
+    padding:20px;
+    background-color: #FFF;
+}
+
+.page-header a {
+    font-size:20px;
+}
+
+.page-header__item {
+    flex: 0 1 177px;
+}
+
+.page-header__item:first-child {
+    margin-left:20px;
+}
+.page-header__item:last-child {
+    flex-grow:1;
+    text-align:right;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    padding-top:70px;
+    margin:0 auto;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:20px;
+}
+
+.grid__item {
+    border-radius:15px;
+    background-color: var(--light-gray);
+    padding:0 20px 20px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 1s ease;
+
+}
+
+.grid__item:hover {
+    transform: scale(1.02);
+    background-color: var(--secondary-color);
+}
+
+.grid__item:nth-child(2) {
+    grid-column-start:2;
+    grid-column-end:4;
+}
+
+.grid__item:nth-child(6) {
+    grid-column-start:1;
+    grid-column-end:4;
+}
+
+.page-footer {
+    clear: both;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    margin-top:100px;
+    padding-bottom:20px;
+}
+
+.social-media a:hover {
+    opacity:0.8;
+}
+.skills {
+    margin:30px auto 0 auto;
+}
+
+td {
+    text-align:center;
+    border: 1px solid var(--tertiary-color);
+}
+
+.contact-box {
+    width:auto;
+    border-radius: 15px;
+    background-color: var(--light-gray);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding:20px;
+
+}
+
+.contact-links {
+position: relative;
+right:40px;
+top:15px;
+}
+
+.contact-links li {
+    display:inline-block;
+    padding-right: 20px;
+    margin:5px auto;
+
+}
+
+#boat1 {
+    animation-duration:10s;
+    animation-name: boat-one-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+  }
+  
+#boat2 {
+    animation-duration:10s;
+    animation-name: boat-two-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+  }
+  
+#boat3 {
+    animation-duration:10s;
+    animation-name: boat-three-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+  }
+
+            /* .sun {
+                animation-duration: 4s;
+                animation-name: color-change;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+
+                or can write as
+                .sun {
+                    animation: 4s color-change infinate alternate linear;
+                } */
+
+
+
+@keyframes boat-one-move {
+    to {
+        transform: translateX(100px)
+    }
+}
+
+@keyframes boat-two-move {
+    to {
+        transform: translateX(100px)
+    }
+}
+
+@keyframes boat-three-move {
+    to {
+        transform: translateX(100px)
+    }
+}
+
+
+/* start media queries */
+
+@media all and (max-width:750px) {
+    .grid {
+        grid-gap:10px;
+    }
+
+    .grid__item:nth-child(2) {
+        grid-column:auto / auto;
+        grid-row: auto / auto;
+    }
+    
+    .grid__item:nth-child(6) {
+        grid-column:auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h2 {
+        font-size:20px;
+    }
+}
+
+@media all and (max-width:500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width:500px) and (max-width:750px) {
+    .grid {
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media all and  (max-width:750px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-information {
+        margin: auto auto;
+    }
+    .form {
+        padding-top:25px;
+        margin: auto auto;
+    }
+
+    .contact-links:nth-child(1) {
+        order:4;
+    }
+}
