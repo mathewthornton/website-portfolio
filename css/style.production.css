@@ -240,6 +240,10 @@ input:hover {
     margin:30px auto 0 auto;
 }
 
+.caption {
+    text-align:right;
+}
+
 td {
     text-align:center;
     border: 1px solid #a1a499;

@@ -186,6 +186,10 @@ input, textarea {
     margin:30px auto 0 auto;
 }
 
+.caption {
+    text-align:right;
+}
+
 td {
     text-align:center;
     border: 1px solid var(--tertiary-color);
